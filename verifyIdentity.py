@@ -30,12 +30,12 @@ https://developers.barocert.com/reference/pass/python/identity/api#VerifyIdentit
 clientCode = settings.ClientCode
 
 identityVerify = PassIdentityVerify(        
-    receiverHP = self.passcertService._encrypt('01012341234'),
-    receiverName = self.passcertService._encrypt('홍길동')
+    receiverHP = passcertService._encrypt('01012341234'),
+    receiverName = passcertService._encrypt('홍길동')
 )
 
 try :
-    obj = self.passcertService.verifyIdentity(self.clientCode, '02309080230700000140000000000007', identityVerify)
+    obj = passcertService.verifyIdentity(clientCode, '02309080230700000140000000000007', identityVerify)
     print(obj.receiptID)
     print(obj.state)
     print(obj.receiverName)
