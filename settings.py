@@ -27,6 +27,3 @@ IPRestrictOnOff = True
 
 # 패스써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
 UseStaticIP = False
-
-# 로컬시스템 시간 사용여부, True-사용, False-미사용, 기본값(True)
-UseLocalTimeYN = True

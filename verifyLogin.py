@@ -16,7 +16,6 @@ from barocert import *
 passcertService = PasscertService(settings.LinkID, settings.SecretKey)
 passcertService.IPRestrictOnOff = settings.IPRestrictOnOff
 passcertService.UseStaticIP = settings.UseStaticIP
-passcertService.UseLocalTimeYN = settings.UseLocalTimeYN
 
 """
 완료된 전자서명을 검증하고 전자서명값(signedData)을 반환 받습니다.

@@ -16,7 +16,6 @@ from barocert import *
 passcertService = PasscertService(settings.LinkID, settings.SecretKey)
 passcertService.IPRestrictOnOff = settings.IPRestrictOnOff
 passcertService.UseStaticIP = settings.UseStaticIP
-passcertService.UseLocalTimeYN = settings.UseLocalTimeYN
 
 """
 패스 이용자에게 자동이체 출금동의를 요청합니다.

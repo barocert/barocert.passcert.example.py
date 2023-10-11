@@ -16,7 +16,6 @@ from barocert import *
 passcertService = PasscertService(settings.LinkID, settings.SecretKey)
 passcertService.IPRestrictOnOff = settings.IPRestrictOnOff
 passcertService.UseStaticIP = settings.UseStaticIP
-passcertService.UseLocalTimeYN = settings.UseLocalTimeYN
 
 """
 자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
