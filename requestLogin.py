@@ -29,11 +29,11 @@ login = PassLogin(
     receiverHP = passcertService._encrypt('01012341234'),
     receiverName = passcertService._encrypt('홍길동'),
     receiverBirthday = passcertService._encrypt('19700101'),
-    reqTitle = '간편로그인 요청 메시지 제목란',
+    reqTitle = '간편로그인 요청 메시지 제목',
     reqMessage = passcertService._encrypt('간편로그인 요청 메시지'),
     callCenterNum = '1600-9854',
     expireIn = 1000,
-    token = passcertService._encrypt('간편로그인요청토큰'),
+    token = passcertService._encrypt('간편로그인 요청 원문'),
     userAgreementYN = True,
     receiverInfoYN = True,
     appUseYN = False
@@ -41,7 +41,7 @@ login = PassLogin(
 
 try :
     obj = passcertService.requestLogin(clientCode, login)
-    print(obj.receiptId)
+    print(obj.receiptID)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)

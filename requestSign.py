@@ -29,11 +29,11 @@ sign = PassSign(
     receiverHP = passcertService._encrypt('01012341234'),
     receiverName = passcertService._encrypt('홍길동'),
     receiverBirthday = passcertService._encrypt('19700101'),
-    reqTitle = '전자서명 요청 메시지 제목란',
+    reqTitle = '전자서명 요청 메시지 제목',
     reqMessage = passcertService._encrypt('전자서명 요청 메시지'),
     callCenterNum = '1600-9854',
     expireIn = 1000,
-    token = passcertService._encrypt('전자서명테스트데이터'),
+    token = passcertService._encrypt('전자서명 요청 원문'),
     tokenType = 'HASH',
     userAgreementYN = True,
     receiverInfoYN = True,
@@ -45,7 +45,7 @@ sign = PassSign(
 
 try :
     obj = passcertService.requestSign(clientCode, sign)
-    print(obj.receiptId)
+    print(obj.receiptID)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)
