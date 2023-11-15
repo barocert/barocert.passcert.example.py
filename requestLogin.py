@@ -37,11 +37,15 @@ login = PassLogin(
     userAgreementYN = True,
     receiverInfoYN = True,
     appUseYN = False
+    # telcoType = 'SKT',
+    # deviceOSType = 'IOS'
 )
 
 try :
     obj = passcertService.requestLogin(clientCode, login)
     print(obj.receiptID)
+    print(obj.scheme)
+    print(obj.marketUrl)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)

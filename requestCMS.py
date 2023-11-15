@@ -41,11 +41,15 @@ cms = PassCMS(
     bankServiceType = passcertService._encrypt('CMS'),
     bankWithdraw = passcertService._encrypt('1,000,000원'),
     appUseYN = False,
+    # telcoType = 'SKT',
+    # deviceOSType = 'IOS'
 )
 
 try :
     obj = passcertService.requestCMS(clientCode, cms)
     print(obj.receiptID)
+    print(obj.scheme)
+    print(obj.marketUrl)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)

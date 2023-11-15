@@ -37,11 +37,15 @@ identity = PassIdentity(
     userAgreementYN = True,
     receiverInfoYN = True,
     appUseYN = False
+    # telcoType = 'SKT',
+    # deviceOSType = 'IOS'
 )
 
 try :
     obj = passcertService.requestIdentity(clientCode, identity)
     print(obj.receiptID)
+    print(obj.scheme)
+    print(obj.marketUrl)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)

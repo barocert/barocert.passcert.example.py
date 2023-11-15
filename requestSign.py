@@ -41,11 +41,15 @@ sign = PassSign(
     originalURL = 'https://www.passcert.co.kr',
     originalFormatCode = 'HTML',
     appUseYN = False,
+    # telcoType = 'SKT',
+    # deviceOSType = 'IOS'
 )
 
 try :
     obj = passcertService.requestSign(clientCode, sign)
     print(obj.receiptID)
+    print(obj.scheme)
+    print(obj.marketUrl)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)
